@@ -212,3 +212,11 @@ table tr:nth-child(even){
     cursor: pointer;
     border: none;
 }
+
+.error-message{
+    color:#dc3545;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    display: none;
+}

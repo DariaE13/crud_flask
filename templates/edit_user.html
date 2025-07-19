@@ -29,8 +29,8 @@
             <div class="input-group">
                 <select name="gender" id="gender" required>
                     <option value="" disabled {% if not user[3] %}selected{% endif %}></option>
-                    <option value="Мужской" {% if user[3] = 'Мужской' %}selected{% endif %}>Мужской</option>
-                    <option value="Женский" {% if user[3] = 'Женский' %}selected{% endif %}>Женский</option>
+                    <option value="Мужской" {% if user[3] == 'Мужской' %}selected{% endif %}>Мужской</option>
+                    <option value="Женский" {% if user[3] == 'Женский' %}selected{% endif %}>Женский</option>
                 </select>
                 <label class="label-select" for="gender">Пол</label>
                 <div class="error-message" data-error-for="gender"></div>
@@ -72,6 +72,11 @@
     </div>
 </div>
 
-
+<script>
+        const THEME_LIGHT = "{{ url_for('static',filename='css/light.css') }}"
+        const THEME_DARK = "{{ url_for('static',filename='css/dark.css') }}"
+    </script>
+    <script src="{{ url_for('static',filename='js/theme_switcher.js') }}" defer></script>
+    <script src="{{ url_for('static',filename='js/form_validator.js') }}" defer></script>
 </body>
 </html>

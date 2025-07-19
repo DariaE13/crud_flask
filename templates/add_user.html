@@ -70,8 +70,11 @@
 </div>
 
 <script>
-   
-</script>
+        const THEME_LIGHT = "{{ url_for('static',filename='css/light.css') }}"
+        const THEME_DARK = "{{ url_for('static',filename='css/dark.css') }}"
+    </script>
+    <script src="{{ url_for('static',filename='js/theme_switcher.js') }}" defer></script>
+    <script src="{{ url_for('static',filename='js/form_validator.js') }}" defer></script>
 
 </body>
 </html>
